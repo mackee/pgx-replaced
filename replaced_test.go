@@ -13,7 +13,7 @@ func TestRun(t *testing.T) {
 		t.Errorf("error sql.Open: %s", err)
 		t.Fail()
 	}
-	row := db.QueryRow("SELECT * FROM sample1 WHERE id = ?", 1)
+	row := db.QueryRow("SELECT * FROM `sample1` WHERE id = ?", 1)
 	var (
 		id   int64
 		name string

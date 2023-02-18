@@ -32,6 +32,7 @@ func replaceQuery(q string) string {
 		count++
 		q = n
 	}
+	q = strings.ReplaceAll(q, "`", "")
 	return q
 }
 
